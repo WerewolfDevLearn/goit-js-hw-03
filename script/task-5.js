@@ -12,10 +12,10 @@ const getAllPropValues = function(arr, prop) {
     const product = arr[i];
     if (product[`${prop}`] === undefined) {
       return propreties;
-    } else {
-      propreties.push(product[`${prop}`]);
     }
+    propreties.push(product[`${prop}`]);
   }
+
   return propreties;
 };
 

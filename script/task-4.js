@@ -4,12 +4,12 @@ const countTotalSalary = function(employees) {
   let totalSalary = 0;
   if (arrOfSalary.length === 0) {
     return totalSalary;
-  } else {
-    for (let i = 0; i < arrOfSalary.length; i += 1) {
-      totalSalary += arrOfSalary[i];
-    }
-    return totalSalary;
   }
+  for (let i = 0; i < arrOfSalary.length; i += 1) {
+    totalSalary += arrOfSalary[i];
+  }
+
+  return totalSalary;
 };
 
 /*
