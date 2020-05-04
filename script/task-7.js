@@ -18,13 +18,13 @@ const account = {
     const transaction = {
       type,
       amount,
+      id: this.transactions.length,
     };
     return transaction;
   },
   deposit(amount) {
     this.balance += amount;
     const transaction = this.createTransaction(amount, 'deposit');
-    transaction.id = this.transactions.length;
     this.transactions.push(transaction);
   },
   withdraw(amount) {
@@ -36,7 +36,6 @@ const account = {
     } else {
       this.balance -= amount;
       const transaction = this.createTransaction(amount, 'withdraw');
-      transaction.id = this.transactions.length;
       this.transactions.push(transaction);
     }
   },

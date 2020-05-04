@@ -1,15 +1,15 @@
 const findBestEmployee = function(employees) {
   const arrOfEmployees = Object.entries(employees);
-  let j;
+  let bestEmployeeindex;
   let totalWorks = 0;
   for (let i = 0; i < arrOfEmployees.length; i += 1) {
     const bestEmployee = arrOfEmployees[i];
     if (totalWorks < bestEmployee[1]) {
-      j = i;
+      bestEmployeeindex = i;
       totalWorks = bestEmployee[1];
     }
   }
-  return arrOfEmployees[j];
+  return arrOfEmployees[bestEmployeeindex];
 };
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
